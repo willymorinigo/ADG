@@ -8,16 +8,18 @@ import { motion } from 'motion/react';
 import { HERO_CONTENT } from '../data/content';
 import { ArrowRight, Lock } from 'lucide-react';
 
+// @ts-ignore
+import heroVideo from '../assets/images/video.mp4';
+
 const BACKGROUND_VIDEOS = [
-  'https://assets.mixkit.co/videos/preview/mixkit-farmer-hands-holding-wheat-grains-43097-large.mp4',
-  'https://assets.mixkit.co/videos/preview/mixkit-wind-blowing-in-a-wheat-field-43093-large.mp4',
-  'https://assets.mixkit.co/videos/preview/mixkit-farm-landscape-with-a-silo-and-fields-43187-large.mp4'
+  heroVideo
 ];
 
 export default function Hero() {
   const [currentVideo, setCurrentVideo] = useState(0);
 
   useEffect(() => {
+    if (BACKGROUND_VIDEOS.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentVideo((prev) => (prev + 1) % BACKGROUND_VIDEOS.length);
     }, 7000); // Change video every 7 seconds
@@ -80,7 +82,7 @@ export default function Hero() {
         ))}
 
         {/* Seamless vertical gradient from transparent at the top to white at the bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 via-white/30 to-white/75 z-1" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/25 via-white/55 to-white/90 z-1" />
 
         {/* Decorative bottom gradient to blend perfectly into the Quiénes Somos section */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-50 to-transparent z-2" />
