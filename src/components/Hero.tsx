@@ -9,9 +9,9 @@ import { HERO_CONTENT } from '../data/content';
 import { ArrowRight, Lock } from 'lucide-react';
 
 const BACKGROUND_VIDEOS = [
-  'https://assets.mixkit.co/videos/preview/mixkit-farm-landscape-with-a-silo-and-fields-43187-large.mp4',
   'https://assets.mixkit.co/videos/preview/mixkit-farmer-hands-holding-wheat-grains-43097-large.mp4',
-  'https://assets.mixkit.co/videos/preview/mixkit-wind-blowing-in-a-wheat-field-43093-large.mp4'
+  'https://assets.mixkit.co/videos/preview/mixkit-wind-blowing-in-a-wheat-field-43093-large.mp4',
+  'https://assets.mixkit.co/videos/preview/mixkit-farm-landscape-with-a-silo-and-fields-43187-large.mp4'
 ];
 
 export default function Hero() {
